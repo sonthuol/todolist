@@ -1,4 +1,4 @@
-import {View, Text} from 'react-native';
+import {View, Text, StyleProp, TextStyle} from 'react-native';
 import React from 'react';
 import {globalStyles} from '../styles/globalStyles';
 import {fontFamilies} from '../constants/fontFamilies';
@@ -11,10 +11,11 @@ interface Props {
   font?: string;
   color?: string;
   flex?: number;
+  styles?: StyleProp<TextStyle>;
 }
 
 const TextComponent = (props: Props) => {
-  const {text, size, font, color, flex} = props;
+  const {text, size, font, color, flex, styles} = props;
 
   return (
     <Text
@@ -26,6 +27,7 @@ const TextComponent = (props: Props) => {
           fontSize: size ?? fontSizes.default,
           color: color ?? colors.desc,
         },
+        styles,
       ]}>
       {text}
     </Text>

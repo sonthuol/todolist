@@ -1,16 +1,18 @@
+import {Element4, Notification, SearchNormal} from 'iconsax-react-native';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {
   CardContainer,
   ContainerComponent,
   RowComponent,
   SectionComponent,
+  SpaceComponent,
+  TagComponent,
   TextComponent,
   TitleComponent,
 } from '../components';
-import {globalStyles} from '../styles/globalStyles';
 import {colors} from '../constants/colors';
-import { Element4 } from 'iconsax-react-native';
+import {globalStyles} from '../styles/globalStyles';
 
 const HomeScreen = () => {
   return (
@@ -18,7 +20,7 @@ const HomeScreen = () => {
       <SectionComponent>
         <RowComponent justify="space-between">
           <Element4 size={24} color={colors.desc} />
-          <TextComponent text="Todo List" />
+          <Notification size={24} color={colors.desc} />
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
@@ -29,8 +31,8 @@ const HomeScreen = () => {
         <RowComponent
           styles={[globalStyles.inputContainer]}
           onPress={() => console.log('Say hi')}>
-          <TextComponent text="Search" />
-          <Text>S</Text>
+          <TextComponent color="#696B6F" text="Search task" />
+          <SearchNormal size={20} color={colors.desc} />
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
@@ -39,7 +41,13 @@ const HomeScreen = () => {
             <View style={{flex: 1}}>
               <TitleComponent text="Task Progress" />
               <TextComponent text="30/40 task done" />
-              <TextComponent text="Tag" />
+              <SpaceComponent height={12} />
+              <RowComponent justify="flex-start">
+                <TagComponent
+                  text="March 22"
+                  onPress={() => console.log('tag')}
+                />
+              </RowComponent>
             </View>
             <View>
               <TextComponent text="Circle Char" />
