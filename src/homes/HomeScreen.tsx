@@ -3,6 +3,7 @@ import React from 'react';
 import {View} from 'react-native';
 import {
   CardContainer,
+  CircularConponent,
   ContainerComponent,
   RowComponent,
   SectionComponent,
@@ -31,7 +32,7 @@ const HomeScreen = () => {
         <RowComponent
           styles={[globalStyles.inputContainer]}
           onPress={() => console.log('Say hi')}>
-          <TextComponent color="#696B6F" text="Search task" />
+          <TextComponent color={colors.gray2} text="Search task" />
           <SearchNormal size={20} color={colors.desc} />
         </RowComponent>
       </SectionComponent>
@@ -50,7 +51,7 @@ const HomeScreen = () => {
               </RowComponent>
             </View>
             <View>
-              <TextComponent text="Circle Char" />
+              <CircularConponent value={80} />
             </View>
           </RowComponent>
         </CardContainer>

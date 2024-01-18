@@ -1,4 +1,5 @@
 import CardContainer from './CardContainer';
+import CircularConponent from './CircularConponent';
 import ContainerComponent from './ContainerComponent';
 import RowComponent from './RowComponent';
 import SectionComponent from './SectionComponent';
@@ -16,4 +17,5 @@ export {
   CardContainer,
   TagComponent,
   SpaceComponent,
+  CircularConponent,
 };
