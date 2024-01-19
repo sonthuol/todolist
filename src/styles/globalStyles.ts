@@ -6,8 +6,7 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.bgColor,
-    padding: 20,
-    paddingTop: Platform.OS === 'ios' ? 42 : 32,
+    paddingTop: Platform.OS === 'ios' ? 12 : 12,
   },
 
   row: {
@@ -31,6 +30,7 @@ export const globalStyles = StyleSheet.create({
 
   section: {
     marginBottom: 16,
+    paddingHorizontal: 20,
   },
 
   tag: {

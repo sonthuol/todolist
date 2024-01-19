@@ -117,6 +117,19 @@ const HomeScreen = () => {
           </View>
         </RowComponent>
       </SectionComponent>
+      <SpaceComponent height={16} />
+      <SectionComponent>
+        <TitleComponent text="Urgent tasks" />
+        <SpaceComponent height={16} />
+        <CardComponent>
+          <RowComponent>
+            <CircularConponent value={40} radius={36} />
+            <View style={{flex: 1, justifyContent: 'center', padding: 12}}>
+              <TextComponent text="Title of task" />
+            </View>
+          </RowComponent>
+        </CardComponent>
+      </SectionComponent>
     </ContainerComponent>
   );
 };
