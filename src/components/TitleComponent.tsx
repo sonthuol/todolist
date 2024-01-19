@@ -8,10 +8,11 @@ interface Props {
   size?: number;
   font?: string;
   color?: string;
+  flex?: number;
 }
 
 const TitleComponent = (props: Props) => {
-  const {text, size, font, color} = props;
+  const {text, size, font, color, flex} = props;
 
   return (
     <TextComponent
@@ -19,6 +20,7 @@ const TitleComponent = (props: Props) => {
       size={size ?? 20}
       font={font ?? fontFamilies.semiBold}
       color={color ?? colors.text}
+      flex={flex ?? 1}
     />
   );
 };

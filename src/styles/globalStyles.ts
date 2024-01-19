@@ -6,20 +6,13 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.bgColor,
-    paddingTop: Platform.OS === 'ios' ? 12 : 12,
+    paddingTop: 20,
   },
 
   row: {
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-
-  inputContainer: {
-    backgroundColor: colors.gray,
-    borderRadius: 12,
-    paddingHorizontal: Platform.OS === 'ios' ? 12 : 10,
-    paddingVertical: Platform.OS === 'ios' ? 12 : 10,
+    alignItems: 'center',
   },
 
   text: {
@@ -28,13 +21,20 @@ export const globalStyles = StyleSheet.create({
     color: colors.text,
   },
 
+  inputContainer: {
+    backgroundColor: colors.gray,
+    borderRadius: 12,
+    paddingHorizontal: Platform.OS === 'ios' ? 12 : 10,
+    paddingVertical: 12,
+  },
+
   section: {
     marginBottom: 16,
     paddingHorizontal: 20,
   },
 
   tag: {
-    paddingHorizontal: 16,
+    paddingHorizontal: 20,
     paddingVertical: Platform.OS === 'ios' ? 6 : 4,
     borderRadius: 100,
     backgroundColor: colors.blue,

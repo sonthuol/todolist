@@ -3,6 +3,7 @@ import CardComponent from './CardComponent';
 import CardImageComponent from './CardImageComponent';
 import CircularConponent from './CircularConponent';
 import ContainerComponent from './ContainerComponent';
+import InputComponent from './InputComponent';
 import ProgressBarComponent from './ProgressBarComponent';
 import RowComponent from './RowComponent';
 import SectionComponent from './SectionComponent';
@@ -24,4 +25,5 @@ export {
   CardImageComponent,
   AvatarGroupComponent,
   ProgressBarComponent,
+  InputComponent,
 };
