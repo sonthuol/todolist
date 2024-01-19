@@ -1,10 +1,18 @@
-import {Element4, Notification, SearchNormal} from 'iconsax-react-native';
-import React from 'react';
-import {View} from 'react-native';
 import {
-  CardContainer,
+  Edit2,
+  Element4,
+  Notification,
+  SearchNormal,
+} from 'iconsax-react-native';
+import React from 'react';
+import {TouchableOpacity, View} from 'react-native';
+import {
+  AvatarGroupComponent,
+  CardComponent,
+  CardImageComponent,
   CircularConponent,
   ContainerComponent,
+  ProgressBarComponent,
   RowComponent,
   SectionComponent,
   SpaceComponent,
@@ -37,7 +45,7 @@ const HomeScreen = () => {
         </RowComponent>
       </SectionComponent>
       <SectionComponent>
-        <CardContainer>
+        <CardComponent>
           <RowComponent>
             <View style={{flex: 1}}>
               <TitleComponent text="Task Progress" />
@@ -54,7 +62,60 @@ const HomeScreen = () => {
               <CircularConponent value={80} />
             </View>
           </RowComponent>
-        </CardContainer>
+        </CardComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <RowComponent styles={{alignItems: 'flex-start'}}>
+          <View style={{flex: 1}}>
+            <CardImageComponent>
+              <TouchableOpacity
+                onPress={() => {}}
+                style={[globalStyles.iconContainer]}>
+                <Edit2 size={22} color={colors.white} />
+              </TouchableOpacity>
+              <TitleComponent text={'UX Design'} />
+              <TextComponent text={'Task management mobile app'} size={13} />
+              <View style={{marginVertical: 20}}>
+                <AvatarGroupComponent />
+                <ProgressBarComponent
+                  size="large"
+                  percent="70%"
+                  color="#0AACFF"
+                />
+              </View>
+              <TextComponent text="Tue, 2023 Match 03" size={12} />
+            </CardImageComponent>
+          </View>
+          <SpaceComponent width={16} />
+          <View style={{flex: 1}}>
+            <CardImageComponent color="rgba(33, 150, 243, 0.9)">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={[globalStyles.iconContainer]}>
+                <Edit2 size={22} color={colors.white} />
+              </TouchableOpacity>
+              <TitleComponent text={'API Payment'} />
+              <View style={{marginVertical: 20}}>
+                <AvatarGroupComponent />
+                <ProgressBarComponent
+                  size="large"
+                  percent="70%"
+                  color="#A2F068"
+                />
+              </View>
+            </CardImageComponent>
+            <SpaceComponent height={16} />
+            <CardImageComponent color="rgba(18, 181, 22, 0.9)">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={[globalStyles.iconContainer]}>
+                <Edit2 size={22} color={colors.white} />
+              </TouchableOpacity>
+              <TitleComponent text={'Update work'} />
+              <TextComponent text={'Revission home page'} size={13} />
+            </CardImageComponent>
+          </View>
+        </RowComponent>
       </SectionComponent>
     </ContainerComponent>
   );

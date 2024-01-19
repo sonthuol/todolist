@@ -39,4 +39,18 @@ export const globalStyles = StyleSheet.create({
     borderRadius: 100,
     backgroundColor: colors.blue,
   },
+
+  card: {
+    borderRadius: 12,
+  },
+
+  iconContainer: {
+    width: 40,
+    height: 40,
+    borderRadius: 100,
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
 });

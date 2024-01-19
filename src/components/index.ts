@@ -1,6 +1,9 @@
-import CardContainer from './CardContainer';
+import AvatarGroupComponent from './AvatarGroupComponent';
+import CardComponent from './CardComponent';
+import CardImageComponent from './CardImageComponent';
 import CircularConponent from './CircularConponent';
 import ContainerComponent from './ContainerComponent';
+import ProgressBarComponent from './ProgressBarComponent';
 import RowComponent from './RowComponent';
 import SectionComponent from './SectionComponent';
 import SpaceComponent from './SpaceComponent';
@@ -14,8 +17,11 @@ export {
   SectionComponent,
   TextComponent,
   TitleComponent,
-  CardContainer,
+  CardComponent,
   TagComponent,
   SpaceComponent,
   CircularConponent,
+  CardImageComponent,
+  AvatarGroupComponent,
+  ProgressBarComponent,
 };
