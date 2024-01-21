@@ -3,12 +3,9 @@ import {
   ContainerComponent,
   InputComponent,
   SectionComponent,
-  SpaceComponent,
-  TextComponent,
 } from '../../components';
 import {TaskModel} from '../../models/TaskModel';
-import {User} from 'iconsax-react-native';
-import {colors} from '../../constants/colors';
+import {Button} from 'react-native';
 
 const initValue: TaskModel = {
   title: '',
@@ -29,6 +26,10 @@ function AddNewTask({navigation}: any) {
     setTaskDetail(item);
   };
 
+  const handleAddNewTask = () => {
+    console.log(taskDetail);
+  };
+
   return (
     <ContainerComponent back title="And new task">
       <SectionComponent>
@@ -39,6 +40,18 @@ function AddNewTask({navigation}: any) {
           allowClear
           onChange={val => handleChangeValue('title', val)}
         />
+        <InputComponent
+          title="Description"
+          placeholder="Content"
+          value={taskDetail.description}
+          allowClear
+          onChange={val => handleChangeValue('description', val)}
+          multiple
+          numberOfLine={3}
+        />
+      </SectionComponent>
+      <SectionComponent>
+        <Button title="SAVE" onPress={handleAddNewTask} />
       </SectionComponent>
     </ContainerComponent>
   );

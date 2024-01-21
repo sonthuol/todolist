@@ -32,12 +32,16 @@ const InputComponent = (props: Props) => {
 
   return (
     <View style={{marginBottom: 20}}>
-      <TextComponent text="Demo" flex={0} />
+      {title && <TextComponent text={title} flex={0} />}
       <RowComponent
         styles={[
           globalStyles.inputContainer,
           {
             marginTop: title ? 8 : 0,
+            minHeight: multiple && numberOfLine ? 32 * numberOfLine : 32,
+            paddingVertical: 14,
+            paddingHorizontal: 10,
+            alignItems: 'flex-start',
           },
         ]}>
         {prefix && prefix}
