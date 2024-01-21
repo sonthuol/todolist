@@ -2,6 +2,7 @@ import React from 'react';
 import {TextComponent} from '.';
 import {fontFamilies} from '../constants/fontFamilies';
 import {colors} from '../constants/colors';
+import {StyleProp, TextStyle} from 'react-native';
 
 interface Props {
   text: string;
@@ -9,10 +10,11 @@ interface Props {
   font?: string;
   color?: string;
   flex?: number;
+  styles?: StyleProp<TextStyle>;
 }
 
 const TitleComponent = (props: Props) => {
-  const {text, size, font, color, flex} = props;
+  const {text, size, font, color, flex, styles} = props;
 
   return (
     <TextComponent
@@ -21,6 +23,7 @@ const TitleComponent = (props: Props) => {
       font={font ?? fontFamilies.semiBold}
       color={color ?? colors.text}
       flex={flex ?? 1}
+      styles={styles}
     />
   );
 };

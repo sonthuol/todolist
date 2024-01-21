@@ -1,9 +1,10 @@
-import React, {ReactNode} from 'react';
+import React, {ReactNode, useState} from 'react';
 import {TextInput, TouchableOpacity, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import {RowComponent, TextComponent} from '.';
 import {colors} from '../constants/colors';
 import {globalStyles} from '../styles/globalStyles';
+import {Eye, EyeSlash} from 'iconsax-react-native';
 
 interface Props {
   title?: string;
@@ -14,6 +15,7 @@ interface Props {
   allowClear?: boolean;
   multiple?: boolean;
   numberOfLine?: number;
+  isPassword?: boolean;
   onChange: (val: string) => void;
 }
 
@@ -27,8 +29,11 @@ const InputComponent = (props: Props) => {
     allowClear,
     multiple,
     numberOfLine,
+    isPassword,
     onChange,
   } = props;
+
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
   return (
     <View style={{marginBottom: 20}}>
@@ -62,12 +67,24 @@ const InputComponent = (props: Props) => {
             multiline={multiple}
             numberOfLines={numberOfLine}
             onChangeText={val => onChange(val)}
+            secureTextEntry={isPassword ? !isShowPassword : false}
           />
         </View>
         {affix && affix}
         {allowClear && value.length > 0 && (
           <TouchableOpacity onPress={() => onChange('')}>
-            <AntDesign name="close" color={colors.white} size={22} />
+            <AntDesign name="close" color={colors.desc} size={22} />
+          </TouchableOpacity>
+        )}
+        {isPassword && value.length > 0 && (
+          <TouchableOpacity
+            activeOpacity={1}
+            onPress={() => setIsShowPassword(!isShowPassword)}>
+            {isShowPassword ? (
+              <EyeSlash color={colors.desc} size={22} />
+            ) : (
+              <Eye color={colors.desc} size={22} />
+            )}
           </TouchableOpacity>
         )}
       </RowComponent>
