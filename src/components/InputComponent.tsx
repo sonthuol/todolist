@@ -68,6 +68,7 @@ const InputComponent = (props: Props) => {
             numberOfLines={numberOfLine}
             onChangeText={val => onChange(val)}
             secureTextEntry={isPassword ? !isShowPassword : false}
+            autoCapitalize="none"
           />
         </View>
         {affix && affix}

@@ -1,4 +1,5 @@
 import AvatarGroupComponent from './AvatarGroupComponent';
+import ButtonComponent from './ButtonComponent';
 import CardComponent from './CardComponent';
 import CardImageComponent from './CardImageComponent';
 import CircularComponent from './CircularComponent';
@@ -28,4 +29,5 @@ export {
   ProgressBarComponent,
   InputComponent,
   DateTimePickerComponent,
+  ButtonComponent,
 };
