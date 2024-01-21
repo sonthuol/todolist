@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {
+  ButtonComponent,
   ContainerComponent,
   DateTimePickerComponent,
+  DropdownPickerComponent,
   InputComponent,
   RowComponent,
   SectionComponent,
@@ -76,10 +78,17 @@ function AddNewTask({navigation}: any) {
             />
           </View>
         </RowComponent>
+        <DropdownPickerComponent
+          title="Members"
+          selected={taskDetail.uids}
+          items={[]}
+          onSelect={val => console.log(val)}
+          mutiple
+        />
       </SectionComponent>
 
       <SectionComponent>
-        <Button title="SAVE" onPress={handleAddNewTask} />
+        <ButtonComponent text="SAVE" onPress={handleAddNewTask} />
       </SectionComponent>
     </ContainerComponent>
   );

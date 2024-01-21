@@ -5,6 +5,7 @@ import CardImageComponent from './CardImageComponent';
 import CircularComponent from './CircularComponent';
 import ContainerComponent from './ContainerComponent';
 import DateTimePickerComponent from './DateTimePickerComponent';
+import DropdownPickerComponent from './DropdownPickerComponent';
 import InputComponent from './InputComponent';
 import ProgressBarComponent from './ProgressBarComponent';
 import RowComponent from './RowComponent';
@@ -30,4 +31,5 @@ export {
   InputComponent,
   DateTimePickerComponent,
   ButtonComponent,
+  DropdownPickerComponent,
 };

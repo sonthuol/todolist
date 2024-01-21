@@ -77,6 +77,7 @@ const DateTimePickerComponent = (props: Props) => {
                 setIsVisibleModalDateTime(false);
               }}
             />
+            <SpaceComponent height={10} />
             <Button
               title="Close"
               onPress={() => setIsVisibleModalDateTime(false)}
