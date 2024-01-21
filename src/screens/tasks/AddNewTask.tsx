@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {View} from 'react-native';
 import {
   ButtonComponent,
   ContainerComponent,
@@ -9,7 +10,8 @@ import {
   SectionComponent,
 } from '../../components';
 import {TaskModel} from '../../models/TaskModel';
-import {Button, View} from 'react-native';
+import {SelectModel} from '../../models/SelectModel';
+import firestore from '@react-native-firebase/firestore';
 
 const initValue: TaskModel = {
   title: '',
@@ -23,6 +25,34 @@ const initValue: TaskModel = {
 
 function AddNewTask({navigation}: any) {
   const [taskDetail, setTaskDetail] = useState<TaskModel>(initValue);
+  const [usersSelect, setUsersSelect] = useState<SelectModel[]>([]);
+
+  useEffect(() => {
+    handleGetAllUsers();
+  }, []);
+
+  const handleGetAllUsers = async () => {
+    await firestore()
+      .collection('users')
+      .get()
+      .then(snap => {
+        if (snap.empty) {
+          console.log('Users data not found.');
+        } else {
+          const items: SelectModel[] = [];
+          snap.forEach(item => {
+            items.push({
+              label: item.data().name,
+              value: item.id,
+            });
+          });
+          setUsersSelect(items);
+        }
+      })
+      .catch((err: any) => {
+        console.log(`Can not get all user: ${err.message}`);
+      });
+  };
 
   const handleChangeValue = (key: string, value: string | Date) => {
     const item: any = {...taskDetail};
@@ -81,7 +111,7 @@ function AddNewTask({navigation}: any) {
         <DropdownPickerComponent
           title="Members"
           selected={taskDetail.uids}
-          items={[]}
+          items={usersSelect}
           onSelect={val => console.log(val)}
           mutiple
         />
