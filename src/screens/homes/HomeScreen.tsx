@@ -11,7 +11,7 @@ import {
   AvatarGroupComponent,
   CardComponent,
   CardImageComponent,
-  CircularConponent,
+  CircularComponent,
   ContainerComponent,
   ProgressBarComponent,
   RowComponent,
@@ -61,7 +61,7 @@ const HomeScreen = ({navigation}: any) => {
                 </RowComponent>
               </View>
               <View>
-                <CircularConponent value={80} />
+                <CircularComponent value={80} />
               </View>
             </RowComponent>
           </CardComponent>
@@ -124,7 +124,7 @@ const HomeScreen = ({navigation}: any) => {
           <SpaceComponent height={16} />
           <CardComponent>
             <RowComponent>
-              <CircularConponent value={40} radius={36} />
+              <CircularComponent value={40} radius={36} />
               <View style={{flex: 1, justifyContent: 'center', padding: 12}}>
                 <TextComponent text="Title of task" />
               </View>

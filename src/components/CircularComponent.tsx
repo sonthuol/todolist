@@ -10,7 +10,7 @@ interface Props {
   radius?: number;
 }
 
-const CircularConponent = (props: Props) => {
+const CircularComponent = (props: Props) => {
   const {value, maxValue, color, radius} = props;
 
   return (
@@ -32,4 +32,4 @@ const CircularConponent = (props: Props) => {
   );
 };
 
-export default CircularConponent;
+export default CircularComponent;

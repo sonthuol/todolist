@@ -1,8 +1,9 @@
 import AvatarGroupComponent from './AvatarGroupComponent';
 import CardComponent from './CardComponent';
 import CardImageComponent from './CardImageComponent';
-import CircularConponent from './CircularConponent';
+import CircularComponent from './CircularComponent';
 import ContainerComponent from './ContainerComponent';
+import DateTimePickerComponent from './DateTimePickerComponent';
 import InputComponent from './InputComponent';
 import ProgressBarComponent from './ProgressBarComponent';
 import RowComponent from './RowComponent';
@@ -21,9 +22,10 @@ export {
   CardComponent,
   TagComponent,
   SpaceComponent,
-  CircularConponent,
+  CircularComponent,
   CardImageComponent,
   AvatarGroupComponent,
   ProgressBarComponent,
   InputComponent,
+  DateTimePickerComponent,
 };
