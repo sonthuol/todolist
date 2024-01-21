@@ -89,7 +89,7 @@ const SignInScreen = ({navigation}: any) => {
             isPassword
           />
           {errorText && (
-            <TextComponent text={errorText} flex={0} color="coral" />
+            <TextComponent text={errorText} flex={0} color={colors.coral} />
           )}
         </View>
         <SpaceComponent height={20} />
@@ -102,7 +102,7 @@ const SignInScreen = ({navigation}: any) => {
         <Text style={[globalStyles.text, {textAlign: 'center'}]}>
           You don't have an account?{' '}
           <Text
-            style={{color: 'coral'}}
+            style={{color: colors.coral}}
             onPress={() => navigation.navigate('SignUpScreen')}>
             Create an account
           </Text>

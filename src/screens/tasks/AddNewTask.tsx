@@ -54,7 +54,7 @@ function AddNewTask({navigation}: any) {
       });
   };
 
-  const handleChangeValue = (key: string, value: string | Date) => {
+  const handleChangeValue = (key: string, value: string | string[] | Date) => {
     const item: any = {...taskDetail};
     item[key] = value;
     setTaskDetail(item);
@@ -112,7 +112,7 @@ function AddNewTask({navigation}: any) {
           title="Members"
           selected={taskDetail.uids}
           items={usersSelect}
-          onSelect={val => console.log(val)}
+          onSelect={val => handleChangeValue('uids', val)}
           mutiple
         />
       </SectionComponent>
